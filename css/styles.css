@@ -1,0 +1,125 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=GreycliffCF&display=swap');
+
+body {
+  font-family: 'GreycliffCF', sans-serif;
+  background-color: #1a0f1f;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  padding: 1rem;
+}
+
+/* Sections */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 10px #8b008b;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px #cc00ff;
+  position: relative;
+}
+
+.hero .version {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 0 0 20px #cc00ff;
+  position: absolute;
+  top: 0;
+  right: -2rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px #cc00ff;
+}
+
+/* Footer */
+footer {
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  text-align: center;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  text-shadow: 0 0 20px #cc00ff;
+  transition: text-shadow 0.3s ease;
+}
+
+.social-links a:hover {
+  text-shadow: 0 0 20px #cc00ff;
+}
+
+/* General Styles */
+.transparent-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px; /* Adjust height as needed */
+  background-color: rgba(0, 0, 0, 0); /* Clear background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000; /* Ensure it's above header */
+  padding: 10px 20px; /* Adjust padding */
+}
+
+.transparent-bar a, .transparent-bar button {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: opacity 0.3s ease;
+}
+
+.transparent-bar a:hover, .transparent-bar button:hover {
+  opacity: 0.8;
+}
+
+.transparent-bar .discord-link {
+  text-decoration: none;
+}
+
+.transparent-bar .download-button {
+  background-color: #cc00ff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
