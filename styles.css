@@ -6,7 +6,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   font-family: 'GreycliffCF', sans-serif;
   background-color: #1a0f1f;
@@ -14,7 +13,7 @@ body {
   overflow: auto;
 }
 
-/* Sections */
+
 section {
   min-height: 100vh;
   display: flex;
@@ -24,26 +23,17 @@ section {
   padding: 2rem;
   backdrop-filter: blur(10px);
 }
-
 section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
   text-shadow: 0 0 10px #8b008b;
 }
 
-/* Hero Section */
+
 .hero {
   text-align: center;
   position: relative;
 }
-
-.hero h1 {
-  font-size: 6rem;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 20px #cc00ff;
-  position: relative;
-}
-
 .hero .version {
   font-size: 1.5rem;
   color: #fff;
@@ -52,14 +42,25 @@ section h2 {
   top: 0;
   right: -2rem;
 }
-
+.hero h1 {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px #cc00ff;
+  position: relative;
+}
+.hero h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px #cc00ff;
+  position: relative;
+}
 .hero p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   text-shadow: 0 0 20px #cc00ff;
 }
 
-/* General Styles */
+
 .transparent-bar {
   position: fixed;
   top: 0;
@@ -74,7 +75,6 @@ section h2 {
   z-index: 1000; /* Ensure it's above header */
   padding: 10px 20px; /* Adjust padding */
 }
-
 .transparent-bar a, .transparent-bar button {
   margin: 0 10px;
   color: #fff;
@@ -85,41 +85,64 @@ section h2 {
   font-size: 16px;
   transition: opacity 0.3s ease;
 }
-
 .transparent-bar a:hover, .transparent-bar button:hover {
   opacity: 0.8;
 }
-
 .transparent-bar .discord-link {
   text-decoration: none;
 }
-
 .transparent-bar .download-button {
   background-color: #cc00ff;
   padding: 10px 20px;
   border-radius: 5px;
 }
 
-/* statment stuff */
-.statment {
-  padding-top: 70px;
-  text-align: center;
-  position: relative;
-  background: linear-gradient(to bottom, #444444, #666666); /* Gradient from dark grey to lighter grey */
-}
 
-.statment h1 {
-  font-size: 2.2rem;
-  margin-bottom: 1rem;
-  color: #fff; /* Set text color to white */
-}
-
-/* video stuff */
 .video {
-  padding-top: 70px;
-  text-align: center;
+  width: 640px;
+  height: 360px;
+}
+.pulse-glow {
+  animation: pulse 1s infinite alternate;
+}
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #cc00ff, 0 0 80px #cc00ff, 0 0 10px #cc00ff;
+  }
+  to {
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #cc00ff, 0 0 160px #cc00ff, 0 0 20px #cc00ff;
+  }
+}
+
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.box-panel {
   position: relative;
-  background-image: url("images/ccm.png");
-  background-size: cover; 
-  background-position: center; 
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  padding: 20px;
+  background-color: #27172f;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #cc00ff;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box-panel:hover {
+  transform: scale(1.05);
+}
+.box-panel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.content {
+  margin-top: 20px;
+}
+.content p {
+  font-size: 1rem;
+  line-height: 1.4;
 }
