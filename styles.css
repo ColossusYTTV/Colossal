@@ -21,7 +21,6 @@ section {
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  backdrop-filter: blur(10px);
 }
 section h2 {
   font-size: 2rem;
@@ -42,6 +41,13 @@ section h2 {
   top: 0;
   right: -2rem;
 }
+.hero {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 0 20px #cc00ff;
+  text-align: center;
+  top: 50;
+}
 .hero h1 {
   font-size: 6rem;
   margin-bottom: 1rem;
@@ -55,9 +61,45 @@ section h2 {
   position: relative;
 }
 .hero p {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px #cc00ff;
+}
+
+
+.sponsor {
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 0 0 20px #cc00ff;
+  text-align: center;
+  position: relative;
+  top: -5px;
+}
+.sponsor h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 20px #cc00ff;
+}
+.sponsor p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   text-shadow: 0 0 20px #cc00ff;
+}
+.sponsor a {
+  color: #cc00ff;
+}
+.sponsor a:hover {
+  text-decoration: none;
+}
+
+
+.line {
+  width: 25%;
+  height: 2px;
+  background-color: #31173c; 
+  position: absolute;
+  top: 400px;
+  z-index: -1;
 }
 
 
@@ -96,6 +138,14 @@ section h2 {
   padding: 10px 20px;
   border-radius: 5px;
 }
+.left-links {
+  display: flex;
+  align-items: center;
+}
+.left-links a {
+  margin-right: 20px; /* Adjust spacing between links if needed */
+}
+
 
 
 .video {
@@ -129,8 +179,15 @@ section h2 {
   border-radius: 10px;
   box-shadow: 0 0 5px #cc00ff;
   transition: transform 0.3s ease-in-out;
+  display: flex; /* Add */
+  flex-direction: column; /* Add */
+  align-items: center; /* Add */
 }
-
+.content img {
+  width: 100%; /* Make the image fill its container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Add */
+}
 .box-panel:hover {
   transform: scale(1.05);
 }
@@ -141,8 +198,10 @@ section h2 {
 }
 .content {
   margin-top: 20px;
+  flex-grow: 1; /* Add */
 }
 .content p {
   font-size: 1rem;
   line-height: 1.4;
+  text-align: center; /* Add */
 }

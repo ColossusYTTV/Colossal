@@ -1,47 +1,44 @@
 /* General Styles */
-
-*{
-    margin: 0px;
-    padding: 0px;
-}
-
-body{
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
     font-family: 'Exo', sans-serif;
-}
-
-.context {
+    position: relative; /* Add relative positioning to body */
+  }
+  
+  .context {
     width: 100%;
     position: absolute;
-    top:50vh;
-    
-}
-
-.context h1{
+    top: 50vh;
+  }
+  
+  .context h1 {
     text-align: center;
     color: #fff;
     font-size: 50px;
-}
-
-
-.area{
-    background: #4e54c8;  
-    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+  }
+  
+  .area {
+    background: #4e54c8;
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);
     width: 100%;
-    height:100vh;
-    
-   
-}
-
-.backcircles{
-    position: absolute;
+    height: 100vh;
+  }
+  
+  .backcircles {
+    position: fixed; /* Change to fixed positioning */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-}
-
-.backcircles li{
+    z-index: -1; /* Push behind everything */
+  }
+  
+  .backcircles li {
     position: absolute;
     display: block;
     list-style: none;
@@ -52,7 +49,7 @@ body{
     bottom: -150px;
     opacity: 0; /* Initially set opacity to 0 */
     animation-fill-mode: forwards; /* Keep the last keyframe state */
-}
+  }
 
 .backcircles li:nth-child(1){
     left: 25%;
